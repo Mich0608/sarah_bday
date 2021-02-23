@@ -9,8 +9,8 @@
 
   .gif {
     position: absolute;
-    left: calc(50vw - 100px);
-    top: calc(50vw - 200px);
+    left: calc(50% - 100px);
+    top: calc(50% - 150px);
   }
   
   .gif > div {
@@ -19,18 +19,73 @@
     background-position: center;
   }
   
+  a {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    color: rgba(0, 0, 0, 0);
+  }
+  
+  p {
+    visibility: hidden;
+    position: fixed;
+    right: calc(50% - 280px);
+    top: calc(50% - 230px);
+    padding: 30px;
+    width: 500px;
+    height: 340px;
+    text-align: center;
+    font-family: sans-serif;
+    z-index: 1;
+    animation: change-color2 5s infinite;
+    background-color: rgba(200,255,255,0.6);
+    font-size: 19px;
+  }
+  
+  .gif:hover > p {
+    visibility: visible;
+  }
+  
   @keyframes change-color {
     0% { background-color: lightblue; }
     33% { background-color: pink; }
     66% { background-color: yellow; }
     100% { background-color: lightblue; }
   }
+  
+  @keyframes change-color2 {
+    0% { color: hsl(267, 97%, 61%); }
+    50% { color: hsl(333, 89%, 61%);}
+    100% { color: hsl(267, 97%, 61%); }
+  }
+  
 
 </style>
 <body>
+  
   <section class="gif">
-    <div style="background-image: url(sarah-bday.gif)">
-    </div>
+    <p>
+    HAPPY BIRTHDAY SARAH!!!<br>
+    I'm beyond happy that we're roommates 
+    and that we've become such good friends. 
+    I look up to you every single day. 
+    You're always out there stuntin' 
+    on them bitches and kicking ass, and I
+    aspire to have your confidence 
+    and self-assurance in everything you do.
+    Even though we've only known each other for a few months,
+    we have already made so many memories together...
+    the midway, saturday mornings @ plein air, halloween, 
+    stephen's, to name a few. And in these few months I've known you,
+    we've had so many great conversations about everything from
+    relationships to academics to cats. You always give the best 
+    advice. Basically, college would be
+    a lot less fun and chicago winters would be a lot less cold
+    without you. Happy birthday, and stay rad! XD
+  </p>
+    <a>hello</a>
+    <div style="background-image: url(sarah-bday.gif)"></div>
   </section>
+  
 </body>
 
