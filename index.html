@@ -6,6 +6,16 @@
     background-color: lightblue;
     animation: change-color 5s infinite;
   }
+  
+  .sparkle {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(sparkle.gif);
+    background-size: cover;
+  }
 
   .gif {
     position: absolute;
@@ -43,6 +53,10 @@
   }
   
   .gif:hover > p {
+    visibility: visible;
+  }
+  
+  .gif:hover + .sparkle {
     visibility: visible;
   }
   
@@ -86,6 +100,9 @@
     <a>hello</a>
     <div style="background-image: url(sarah-bday.gif)"></div>
   </section>
+  
+  <div class="sparkle">
+    </div>
   
 </body>
 
